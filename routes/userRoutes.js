@@ -155,16 +155,8 @@ userRoute.put(
           profileImage: userUpdated.profileImage,
           token: generateToken(userUpdated),
         });
-
-        //         message:'profile data updated successfully',
-        // username: user.username,
-        // email: user.email,
-        // profileImage:user.profileImage
-        // _id:user._id,
-        // token: generateToken(user)
       } catch (err) {
-        console.log(err);
-        // ImageDelete(req.file.path);
+
         err.statusCode = 404;
         err.message = err;
         next(err);

@@ -38,7 +38,6 @@ commentRoute
           return;
         }
       } catch (err) {
-        //console.log(err);
         err.statusCode = 500;
         err.message = "Story with given id does not Exist";
         next(err);
